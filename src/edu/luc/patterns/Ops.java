@@ -1,3 +1,5 @@
+package edu.luc.patterns;
+
 
 class Plus implements Expr {
 	private Expr left;
@@ -8,10 +10,6 @@ class Plus implements Expr {
 		this.right =  right;
 	}
 	
-	@Override
-	public String toString() {
-		return "Plus Node";
-	}
 
 	@Override
 	public <T> T accept(ExprVisitor<T> visitor){

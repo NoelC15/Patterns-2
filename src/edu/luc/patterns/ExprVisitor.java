@@ -1,3 +1,4 @@
+package edu.luc.patterns;
 
 public interface ExprVisitor<T> {
 	public T visit(Plus plus);

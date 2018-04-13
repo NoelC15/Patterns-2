@@ -1,4 +1,5 @@
-
+package edu.luc.patterns;
+/* A visitor to evaluate numeric expressions (type int ) */
 public class Evaluator implements ExprVisitor<Integer> {
 
 	@Override
