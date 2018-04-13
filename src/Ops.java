@@ -14,17 +14,16 @@ class Plus implements Expr {
 	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
 
 	public Expr getLeft() {
-		return left;
+		return this.left;
 	}
 
 	public Expr getRight() {
-		return right;
+		return this.right;
 	}
 }
 
@@ -37,12 +36,20 @@ class Minus implements Expr {
 		this.left = left;
 		this.right =  right;
 	}
+	
+	public Expr getLeft() {
+		return this.left;
+	}
+
+	public Expr getRight() {
+		return this.right;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 }
 
 
@@ -54,12 +61,20 @@ class Times implements Expr {
 		this.left = left;
 		this.right =  right;
 	}
+	
+	public Expr getLeft() {
+		return this.left;
+	}
+
+	public Expr getRight() {
+		return this.right;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 }
 
 
@@ -71,12 +86,20 @@ class Div implements Expr {
 		this.left = left;
 		this.right =  right;
 	}
+	
+	public Expr getLeft() {
+		return this.left;
+	}
+
+	public Expr getRight() {
+		return this.right;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 }
 
 
@@ -88,12 +111,20 @@ class Mod implements Expr {
 		this.left = left;
 		this.right =  right;
 	}
+	
+	public Expr getLeft() {
+		return this.left;
+	}
+
+	public Expr getRight() {
+		return this.right;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 }
 
 
@@ -103,12 +134,16 @@ class UMinus implements Expr {
 	public UMinus(Expr value) {
 		this.value = value;
 	}
+	
+	public Expr getValue() {
+		return this.value;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 	
 }
 
@@ -118,11 +153,14 @@ class Constant implements Expr{
 	public Constant(int aNumber) {
 		this.number = aNumber;
 	}
+	public int getNumber(){
+		return this.number;
+	}
 
 	@Override
-	public void accept(ExprVisitor visitor) {
-		visitor.visit(this);
-		
+	public <T> T accept(ExprVisitor<T> visitor){
+		return visitor.visit(this);
 	}
+
 }
 

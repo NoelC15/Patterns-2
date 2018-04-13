@@ -1,4 +1,4 @@
 
 public interface Expr {
-	public void accept(ExprVisitor visitor);
+	<T> T accept(ExprVisitor<T> v);
 }

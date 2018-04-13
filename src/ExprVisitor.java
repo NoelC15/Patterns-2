@@ -1,10 +1,10 @@
 
-public interface ExprVisitor {
-	public void visit(Plus plus);
-	public void visit(Minus minus);
-	public void visit(Times times);
-	public void visit(Div div);
-	public void visit(Mod mod);
-	public void visit(UMinus uminus);
-	public void visit(Constant constant);
+public interface ExprVisitor<T> {
+	public T visit(Plus plus);
+	public T visit(Minus minus);
+	public T visit(Times times);
+	public T visit(Div div);
+	public T visit(Mod mod);
+	public T visit(UMinus uminus);
+	public T visit(Constant constant);
 }
