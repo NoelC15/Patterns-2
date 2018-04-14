@@ -66,7 +66,7 @@ public class Printer implements ExprVisitor<String> {
 	public String visit(UMinus uminus) {
 		StringBuilder result = new StringBuilder();
 		result.append("(");
-		result.append("-");
+		result.append(" - ");
 		result.append( uminus.getValue().accept(this));
 		result.append( ")");
 		return result.toString();
