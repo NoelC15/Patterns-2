@@ -1,4 +1,12 @@
-package edu.luc.patterns;
+package edu.luc.patterns.visitor;
+
+import edu.luc.patterns.composite.Constant;
+import edu.luc.patterns.composite.Div;
+import edu.luc.patterns.composite.Minus;
+import edu.luc.patterns.composite.Mod;
+import edu.luc.patterns.composite.Plus;
+import edu.luc.patterns.composite.Times;
+import edu.luc.patterns.composite.UMinus;
 
 /* A visitor for printing expressions */
 

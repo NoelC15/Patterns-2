@@ -1,5 +1,14 @@
-package edu.luc.patterns;
-/* A visitor to evaluate numeric expressions (type int ) */
+package edu.luc.patterns.visitor;
+
+import edu.luc.patterns.composite.Constant;
+import edu.luc.patterns.composite.Div;
+import edu.luc.patterns.composite.Minus;
+import edu.luc.patterns.composite.Mod;
+import edu.luc.patterns.composite.Plus;
+import edu.luc.patterns.composite.Times;
+import edu.luc.patterns.composite.UMinus;
+
+/* A visitor for evaluating numeric expressions (current implementation work with int ) */
 public class Evaluator implements ExprVisitor<Integer> {
 
 	@Override
